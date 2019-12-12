@@ -7,9 +7,11 @@ class Numery():
         self.slownik_cyfr = {"0":'zero', "1":'jeden', "2":'dwa', "3":'trzy', "4":'cztery',
                                  "5":'pięć', "6":'sześć', "7":'siedem', "8":'osiem', "9":'dziewięć'}
         self.slownik_kodow = {"42":"Łódź", "62":"Kolo"}
-     
+       
+    #sprawdzanie czy numer ma 9 cyfr
         if len(numer)==9  :
             print("Numer jest poprawny")
+            #sprawdzanie skąd jest podany nr 
             if self.numer[:2] in self.slownik_kodow:
                 print("Podany numer jest z " + self.slownik_kodow[self.numer[:2]])
             else:
@@ -18,6 +20,7 @@ class Numery():
             print("Podales zly numer")
  
         slownie=""
+    #wypisywanie słowne nr
         for i in self.numer:
             slownie+= (self.slownik_cyfr[i]+" ")
         print(slownie)
